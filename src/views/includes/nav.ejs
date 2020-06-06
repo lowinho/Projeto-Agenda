@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Agenda</a>
+    <!--link para jogar na home-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="/contato/index">Cadastrar contato</a>
+            </li>
+
+            <% if(user) { %>
+                <!-- se o usuário estiver logado aparece link de sair-->
+                <li class="nav-item">
+                    <a class="nav-link" href="/login/logout">Sair</a>
+                </li>
+                <% } else { %>
+                    <!-- se o usuário estiver deslogado aparece link de entrar-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/index">Entrar</a>
+                    </li>
+                    <% } %>
+
+        </ul>
+    </div>
+</nav>
